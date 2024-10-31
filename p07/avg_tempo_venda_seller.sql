@@ -1,5 +1,7 @@
 -- Tempo entre vendas dos sellers
--- apenas pedidos entregues
+ 
+DROP TABLE if EXISTS tb_avg_compra_seller;
+CREATE TABLE tb_avg_compra_seller as
 
 WITH tb_seller_order as ( 
         
@@ -49,4 +51,4 @@ select seller_id,
 
 from tb_tempos_vendas_seller
 
-group by seller_id
+group by seller_id;
